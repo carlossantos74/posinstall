@@ -77,9 +77,10 @@ sudo snap install mailspring
 sudo snap install gimp
 sudo snap install inkscape
 sudo snap install telegram-desktop
-sudo snap install insomnia
 sudo snap install wps-2019-snap
 sudo snap install gnome-calendar
+sudo snap install datagrip --classic
+sudo snap install phpstorm --classic
 
 ## ------------------------- Instalando programas do repositorio ----------------------------##
 sudo apt-get install gnome-sushi -y
@@ -96,8 +97,10 @@ sudo apt-get install transmission -y
 
 ## Finalização, atualização e limpeza##
 
-sudo apt update && sudo apt dist-upgrade -y
 flatpak update -y
+sudo rm /var/cache/fontconfig/*
+sudo rm ~/.cache/fontconfig/*
+sudo apt update && sudo apt dist-upgrade -y
 sudo apt autoclean -y
 sudo apt autoremove -y
 sudo reboot
