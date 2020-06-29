@@ -13,6 +13,7 @@ PPA_OBS_STUDIO="ppa:obsproject/obs-studio"
 URL_WINE_KEY="https://dl.winehq.org/wine-builds/winehq.key"
 URL_PPA_WINE="https://dl.winehq.org/wine-builds/ubuntu/"
 URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
+URL_CLIQ="https://downloads.zohocdn.com/chat-desktop/linux/cliq_1.4.6_amd64.deb"
 
 DIRETORIO_DOWNLOADS="$HOME/Downloads/programas"
 
@@ -61,7 +62,8 @@ mkdir "$DIRETORIO_DOWNLOADS"
 
 ## Download e instalaçao de programas externos ##
 
-wget -c "$URL_GOOGLE_CHROME"       -P "$DIRETORIO_DOWNLOADS
+wget -c "$URL_GOOGLE_CHROME"       -P "$DIRETORIO_DOWNLOADS"
+wget -c "$URL_CLIQ"       -P "$DIRETORIO_DOWNLOADS"
 
 ## ------------------- Instalando pacotes .deb baixados na sessão anterior ----------------- ##
 sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
@@ -81,6 +83,7 @@ sudo snap install wps-2019-snap
 sudo snap install gnome-calendar
 sudo snap install datagrip --classic
 sudo snap install phpstorm --classic
+sudo snap install discord --classic 
 
 ## ------------------------- Instalando programas do repositorio ----------------------------##
 sudo apt-get install gnome-sushi -y
@@ -93,6 +96,7 @@ sudo apt-get install flameshot -y
 sudo apt-get install filezilla -y 
 sudo apt-get install zsh -y
 sudo apt-get install transmission -y 
+sudo apt-get install gnome-shell-pomodoro -y
 # ----------------------------- PÓS-INSTALAÇÃO ----------------------------- #
 
 ## Finalização, atualização e limpeza##
