@@ -96,7 +96,6 @@ sudo apt-get install flameshot -y
 sudo apt-get install filezilla -y 
 sudo apt-get install zsh -y
 sudo apt-get install transmission -y 
-sudo apt-get install gnome-shell-pomodoro -y
 # ----------------------------- PÓS-INSTALAÇÃO ----------------------------- #
 
 ## Finalização, atualização e limpeza##
