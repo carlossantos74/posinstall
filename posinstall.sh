@@ -71,7 +71,6 @@ sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
 sudo apt install --install-recommends winehq-stable wine-stable wine-stable-i386 wine-stable-amd64 -y
 
 ## ----------------------------- Instalando pacotes Snap ------------------------------------##
-sudo snap install spotify
 sudo snap install code --classic
 sudo snap install sublime-text --classic
 sudo snap install kdenlive 
@@ -96,6 +95,42 @@ sudo apt-get install flameshot -y
 sudo apt-get install filezilla -y 
 sudo apt-get install zsh -y
 sudo apt-get install transmission -y 
+sudo apt-get install apt-transport-https curl
+
+
+#------------------------------ Node JS -------------------------------------# 
+
+# Using Ubuntu
+curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+#----------------------------- sportify -------------------------------------# 
+curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+
+sudo apt-get install spotify-client -y 
+
+#----------------------------- Insomnia -------------------------------------# 
+
+# Add to sources
+echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" \
+    | sudo tee -a /etc/apt/sources.list.d/insomnia.list
+
+# Add public key used to verify code signature
+wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc \
+    | sudo apt-key add -
+
+# Refresh repository sources and install Insomnia
+sudo apt-get install insomnia -y
+
+#----------------------------- Brave Browser -------------------------------------# 
+
+curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+
+echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+
+sudo apt-get install brave-browser -y
+
 # ----------------------------- PÓS-INSTALAÇÃO ----------------------------- #
 
 ## Finalização, atualização e limpeza##
