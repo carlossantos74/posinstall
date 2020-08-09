@@ -14,6 +14,7 @@ URL_WINE_KEY="https://dl.winehq.org/wine-builds/winehq.key"
 URL_PPA_WINE="https://dl.winehq.org/wine-builds/ubuntu/"
 URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 URL_CLIQ="https://downloads.zohocdn.com/chat-desktop/linux/cliq_1.4.6_amd64.deb"
+URL_CODE="https://az764295.vo.msecnd.net/stable/91899dcef7b8110878ea59626991a18c8a6a1b3e/code_1.47.3-1595520028_amd64.deb"
 
 DIRETORIO_DOWNLOADS="$HOME/Downloads/programas"
 
@@ -45,9 +46,9 @@ sudo apt-add-repository "$PPA_PHP_MY_ADMIN" -y
 wget -nc "$URL_WINE_KEY"
 sudo apt-key add winehq.key
 sudo apt-add-repository "deb $URL_PPA_WINE bionic main"
-sudo apt install snapd
-sudo apt install flatpak
-sudo apt install chrome-gnome-shell
+sudo apt install snapd -y 
+sudo apt install flatpak 0y 
+sudo apt install chrome-gnome-shell -y 
 # ---------------------------------------------------------------------- #
 
 echo "---------------------Iniciando Instalaçao----------------------"
@@ -64,6 +65,7 @@ mkdir "$DIRETORIO_DOWNLOADS"
 
 wget -c "$URL_GOOGLE_CHROME"       -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_CLIQ"       -P "$DIRETORIO_DOWNLOADS"
+wget -c "$URL_CODE"     -P "$DIRETORIO_DOWNLOADS" 
 
 ## ------------------- Instalando pacotes .deb baixados na sessão anterior ----------------- ##
 sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
@@ -73,13 +75,8 @@ sudo apt install --install-recommends winehq-stable wine-stable wine-stable-i386
 ## ----------------------------- Instalando pacotes Snap ------------------------------------##
 sudo snap install code --classic
 sudo snap install sublime-text --classic
-sudo snap install kdenlive 
 sudo snap install mailspring
-sudo snap install gimp
-sudo snap install inkscape
 sudo snap install telegram-desktop
-sudo snap install wps-2019-snap
-sudo snap install gnome-calendar
 sudo snap install datagrip --classic
 sudo snap install phpstorm --classic
 sudo snap install discord --classic 
@@ -95,7 +92,9 @@ sudo apt-get install flameshot -y
 sudo apt-get install filezilla -y 
 sudo apt-get install zsh -y
 sudo apt-get install transmission -y 
-sudo apt-get install apt-transport-https curl
+sudo apt-get install apt-transport-https curl -y
+sudo apt-get install tilix -y 
+sudo apt-get install libre-office -y 
 
 
 #------------------------------ Node JS -------------------------------------# 
