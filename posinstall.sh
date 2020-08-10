@@ -140,7 +140,6 @@ sudo rm ~/.cache/fontconfig/*
 sudo apt update && sudo apt dist-upgrade -y
 sudo apt autoclean -y
 sudo apt autoremove -y
-sudo reboot
 
 echo "---------------------FINALIZADO----------------------"
 
