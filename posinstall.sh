@@ -73,7 +73,6 @@ sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
 sudo apt install --install-recommends winehq-stable wine-stable wine-stable-i386 wine-stable-amd64 -y
 
 ## ----------------------------- Instalando pacotes Snap ------------------------------------##
-sudo snap install code --classic
 sudo snap install sublime-text --classic
 sudo snap install mailspring
 sudo snap install telegram-desktop
