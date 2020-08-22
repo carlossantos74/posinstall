@@ -1,6 +1,7 @@
+!/usr/bin/env bash
+
 echo "---------------------Iniciando----------------------"
 
-!/usr/bin/env bash
 # ----------------------------- VARIÁVEIS ----------------------------- #
 
 echo "---------------------------Pegando Variáveis----------------------"
@@ -33,7 +34,6 @@ sudo dpkg --add-architecture i386
 
 ## GtkMenuShells // GtkMenuItems ##
 sudo apt install appmenu-gtk2-module
-
 
 ## Atualizando o repositório ##
 sudo apt update -y
@@ -79,6 +79,8 @@ sudo snap install telegram-desktop
 sudo snap install datagrip --classic
 sudo snap install phpstorm --classic
 sudo snap install discord --classic 
+sudo snap install atom --classic 
+sudo snap install figma-linux
 
 ## ------------------------- Instalando programas do repositorio ----------------------------##
 sudo apt-get install gnome-sushi -y
@@ -93,7 +95,10 @@ sudo apt-get install zsh -y
 sudo apt-get install transmission -y 
 sudo apt-get install apt-transport-https curl -y
 sudo apt-get install tilix -y 
-sudo apt-get install libre-office -y 
+sudo apt-get install libre-office -y
+sudo apt-get install vim -y
+sudo apt-get install gimp -y
+sudo apt-get install inkscape -y
 
 
 #------------------------------ Node JS -------------------------------------# 
