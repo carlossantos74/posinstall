@@ -10,6 +10,10 @@ PPA_PHP_MY_ADMIN= "ppa:phpmyadmin/ppa"
 PPA_LUTRIS="ppa:lutris-team/lutris"
 PPA_GRAPHICS_DRIVERS="ppa:graphics-drivers/ppa"
 PPA_OBS_STUDIO="ppa:obsproject/obs-studio"
+PPA_SIMPLE_BATTERY="ppa:slimbook/slimbook"
+PPA_OPEN_RAZER="ppa:openrazer/stable"
+PPA_POLYCHROMATIC=" ppa:polychromatic/stable"
+
 
 URL_WINE_KEY="https://dl.winehq.org/wine-builds/winehq.key"
 URL_PPA_WINE="https://dl.winehq.org/wine-builds/ubuntu/"
@@ -43,6 +47,7 @@ sudo add-apt-repository "$PPA_LUTRIS" -y
 sudo apt-add-repository "$PPA_GRAPHICS_DRIVERS" -y
 sudo apt-add-repository "$PPA_OBS_STUDIO" -y
 sudo apt-add-repository "$PPA_PHP_MY_ADMIN" -y
+sudo apt-add-repository "$PPA_SIMPLE_BATTERY"
 wget -nc "$URL_WINE_KEY"
 sudo apt-key add winehq.key
 sudo apt-add-repository "deb $URL_PPA_WINE bionic main"
@@ -77,7 +82,6 @@ sudo snap install sublime-text --classic
 sudo snap install mailspring
 sudo snap install telegram-desktop
 sudo snap install datagrip --classic
-sudo snap install phpstorm --classic
 sudo snap install discord --classic 
 sudo snap install atom --classic 
 sudo snap install figma-linux
@@ -99,13 +103,19 @@ sudo apt-get install libre-office -y
 sudo apt-get install vim -y
 sudo apt-get install gimp -y
 sudo apt-get install inkscape -y
+sudo apt-get install slimbookbattery -y
+sudo apt-get install gnome-boxes -y 
+sudo apt-get install firefox -y 
+sudo apt-get install python3 -y
+sudo apt-get install openrazer-meta -y
+sudo apt-get install polychromatic -y 
+
 
 
 #------------------------------ Node JS -------------------------------------# 
-
-# Using Ubuntu
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install -y nodejs
+
 
 #----------------------------- sportify -------------------------------------# 
 curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
@@ -134,6 +144,25 @@ echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable ma
 
 sudo apt-get install brave-browser -y
 
+
+# ----------------------------- TOUCHPAD ----------------------------- #
+
+sudo gpasswd -a $USUÁRIO input
+sudo apt-get install xdotool wmctrl
+
+git clone https://github.com/bulletmark/libinput-gestures.git
+cd libinput-gestures
+sudo ./libinput-gestures-setup install
+
+libinput-gestures-setup start
+libinput-gestures-setup autostart
+
+git clone https://gitlab.com/cunidev/gestures
+cd gestures
+sudo python3 setup.py install
+
+
+
 # ----------------------------- PÓS-INSTALAÇÃO ----------------------------- #
 
 ## Finalização, atualização e limpeza##
@@ -141,6 +170,7 @@ sudo apt-get install brave-browser -y
 flatpak update -y
 sudo rm /var/cache/fontconfig/*
 sudo rm ~/.cache/fontconfig/*
+sudo apt-get -f install 
 sudo apt update && sudo apt dist-upgrade -y
 sudo apt autoclean -y
 sudo apt autoremove -y
