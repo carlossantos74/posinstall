@@ -109,7 +109,7 @@ sudo apt-get install firefox -y
 sudo apt-get install python3 -y
 sudo apt-get install openrazer-meta -y
 sudo apt-get install polychromatic -y 
-
+sudo apt-get install neofetch -y
 
 
 #------------------------------ Node JS -------------------------------------# 
@@ -147,7 +147,7 @@ sudo apt-get install brave-browser -y
 
 # ----------------------------- TOUCHPAD ----------------------------- #
 
-sudo gpasswd -a $USUÁRIO input
+sudo gpasswd -a $USER input
 sudo apt-get install xdotool wmctrl
 
 git clone https://github.com/bulletmark/libinput-gestures.git
