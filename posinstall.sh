@@ -110,6 +110,8 @@ sudo apt-get install python3 -y
 sudo apt-get install openrazer-meta -y
 sudo apt-get install polychromatic -y 
 sudo apt-get install neofetch -y
+sudo apt-get install virtualbox -y
+
 
 
 #------------------------------ Node JS -------------------------------------# 
