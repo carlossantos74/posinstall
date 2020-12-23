@@ -20,6 +20,7 @@ URL_PPA_WINE="https://dl.winehq.org/wine-builds/ubuntu/"
 URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb"
 URL_CLIQ="https://downloads.zohocdn.com/chat-desktop/linux/cliq_1.4.6_amd64.deb"
 URL_CODE="https://az764295.vo.msecnd.net/stable/91899dcef7b8110878ea59626991a18c8a6a1b3e/code_1.47.3-1595520028_amd64.deb"
+URL_DBEAVEAR="https://download.dbeaver.com/community/7.3.1/dbeaver-ce_7.3.1_amd64.deb"
 
 DIRETORIO_DOWNLOADS="$HOME/Downloads/programas"
 
@@ -52,8 +53,10 @@ wget -nc "$URL_WINE_KEY"
 sudo apt-key add winehq.key
 sudo apt-add-repository "deb $URL_PPA_WINE bionic main"
 sudo apt install snapd -y 
-sudo apt install flatpak 0y 
+sudo apt install flatpak -y 
 sudo apt install chrome-gnome-shell -y 
+sudo add-apt-repository ppa:caffeine-developers/ppa
+
 # ---------------------------------------------------------------------- #
 
 echo "---------------------Iniciando Instalaçao----------------------"
@@ -70,7 +73,8 @@ mkdir "$DIRETORIO_DOWNLOADS"
 
 wget -c "$URL_GOOGLE_CHROME"       -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_CLIQ"       -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_CODE"     -P "$DIRETORIO_DOWNLOADS" 
+wget -c "$URL_CODE"     -P "$DIRETORIO_DOWNLOADS"
+wget -c "$URL_DBEAVEAR" -P "$DIRETORIO_DOWNLOADS" 
 
 ## ------------------- Instalando pacotes .deb baixados na sessão anterior ----------------- ##
 sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
@@ -111,7 +115,8 @@ sudo apt-get install openrazer-meta -y
 sudo apt-get install polychromatic -y 
 sudo apt-get install neofetch -y
 sudo apt-get install virtualbox -y
-
+sudo apt-get install piper -y
+sudo apt-get install caffeine -y
 
 
 #------------------------------ Node JS -------------------------------------# 
