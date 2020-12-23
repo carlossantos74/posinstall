@@ -117,6 +117,8 @@ sudo apt-get install neofetch -y
 sudo apt-get install virtualbox -y
 sudo apt-get install piper -y
 sudo apt-get install caffeine -y
+sudo apt-get install gitg -y
+
 
 
 #------------------------------ Node JS -------------------------------------# 
