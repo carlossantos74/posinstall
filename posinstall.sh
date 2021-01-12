@@ -21,6 +21,9 @@ URL_GOOGLE_CHROME="https://dl.google.com/linux/direct/google-chrome-stable_curre
 URL_CLIQ="https://downloads.zohocdn.com/chat-desktop/linux/cliq_1.4.6_amd64.deb"
 URL_CODE="https://az764295.vo.msecnd.net/stable/91899dcef7b8110878ea59626991a18c8a6a1b3e/code_1.47.3-1595520028_amd64.deb"
 URL_DBEAVEAR="https://download.dbeaver.com/community/7.3.1/dbeaver-ce_7.3.1_amd64.deb"
+URL_MICRO="https://github-production-release-asset-2e65be.s3.amazonaws.com/53632140/84bb8680-07fb-11eb-8971-a0397105dc9b?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20210112%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20210112T175215Z&X-Amz-Expires=300&X-Amz-Signature=36c2a9ce7bd5741621353681f914ce1f207199acb4088bb10ced58e0c8b03c2b&X-Amz-SignedHeaders=host&actor_id=0&key_id=0&repo_id=53632140&response-content-disposition=attachment%3B%20filename%3Dmicro-2.0.8-amd64.deb&response-content-type=application%2Foctet-stream"
+URL_GITKRAKEN="https://release.axocdn.com/linux/gitkraken-amd64.deb"
+
 
 DIRETORIO_DOWNLOADS="$HOME/Downloads/programas"
 
@@ -74,7 +77,9 @@ mkdir "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_GOOGLE_CHROME"       -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_CLIQ"       -P "$DIRETORIO_DOWNLOADS"
 wget -c "$URL_CODE"     -P "$DIRETORIO_DOWNLOADS"
-wget -c "$URL_DBEAVEAR" -P "$DIRETORIO_DOWNLOADS" 
+wget -c "$URL_DBEAVEAR" -P "$DIRETORIO_DOWNLOADS"
+wget -c "$URL_MICRO" -P "$DIRETORIO_DOWNLOADS"
+wget -c "$URL_GITKRAKEN" -P "$DIRETORIO_DOWNLOADS" 
 
 ## ------------------- Instalando pacotes .deb baixados na sessão anterior ----------------- ##
 sudo dpkg -i $DIRETORIO_DOWNLOADS/*.deb
@@ -126,7 +131,7 @@ curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 
-#----------------------------- sportify -------------------------------------# 
+#----------------------------- spotify -------------------------------------# 
 curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 
